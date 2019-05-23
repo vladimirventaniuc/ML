@@ -29,7 +29,8 @@ def preprocessing():
     np.save('test_ans_save.npy', test_answers)
 
 
-def pegasos_svm_train(data, lam, label):
+def pegasos_svm_train(data, lam, label, trainingAnswers):
+    print("Training classificator with label " + str(label))
     weightVector = np.zeros(784)
     objData = []
     t = 0
@@ -64,79 +65,70 @@ def pegasos_svm_test(testingAnswers, data, w):
             mislabel += 1
     return (mislabel / vectorCount)
 
-
-preprocessing()
-
-trainingVectors = np.load('train_save.npy')
-trainingAns = np.load('train_ans_save.npy')
-weightVectors = []
-
-trainingAnswers = []
-testingAnswers = []
-
-# cross-validation with multiple values of lambda
-lambdas = [2 ** -5, 2 ** -4, 2 ** -3, 2 ** -2, 2 ** -1, 2 ** 0, 2 ** 1]
-
-validationErs = []
-for l in lambdas:
-    wvectors = []
-    valErs = []
-    folds = KFold(n_splits=5, random_state=None, shuffle=False)
-    X = [x for x in range(2000)]
-    for train, test in folds.split(X):
-        ktrain = []
-        ktest = []
-        testingAnswers = []
-        trainingAnswers = []
+def calculate_validation_errors(trainingVectors, trainingAns, lambdas):
+    validationErs = []
+    for l in lambdas:
         wvectors = []
-        ktrain = np.concatenate((trainingVectors[0:test[0]], trainingVectors[test[len(test) - 1]:len(trainingVectors)]),
-                                axis=0)
-        ktest = trainingVectors[test[0]:test[len(test) - 1]]
-        trainingAnswers = np.concatenate(
-            (trainingAns[0:test[0]], trainingAns[test[len(test) - 1]:len(trainingVectors)]), axis=0)
-        testingAnswers = trainingAns[test[0]:test[len(test) - 1]]
+        valErs = []
+        folds = KFold(n_splits=5, random_state=None, shuffle=False)
+        X = [x for x in range(20)]
+        for train, test in folds.split(X):
+            ktrain = []
+            ktest = []
+            testingAnswers = []
+            trainingAnswers = []
+            wvectors = []
+            ktrain = np.concatenate(
+                (trainingVectors[0:test[0]], trainingVectors[test[len(test) - 1]:len(trainingVectors)]),
+                axis=0)
+            ktest = trainingVectors[test[0]:test[len(test) - 1]]
+            trainingAnswers = np.concatenate(
+                (trainingAns[0:test[0]], trainingAns[test[len(test) - 1]:len(trainingVectors)]), axis=0)
+            testingAnswers = trainingAns[test[0]:test[len(test) - 1]]
 
-        for x in range(10):
-            wvectors.append(pegasos_svm_train(ktrain, l, x))
-        val = pegasos_svm_test(testingAnswers, ktest, wvectors)
-        valErs.append(val)
+            for x in range(10):
+                wvectors.append(pegasos_svm_train(ktrain, l, x, trainingAnswers))
+            val = pegasos_svm_test(testingAnswers, ktest, wvectors)
+            valErs.append(val)
 
-    validationErs.append(np.average(valErs))
+        validationErs.append(np.average(valErs))
+    return validationErs
 
-for ls, ve in zip(lambdas, validationErs):
-    print("Lambda:", ls, "ValEr:", ve)
+def show_final_results(trainingVectors, trainingAnswers, testingVectors, testingAns):
+    # Final Run with all testing set
+    final_vectors = []
+    for i in range(10):
+        final_vectors.append(pegasos_svm_train(trainingVectors, 2 ** -5, i, trainingAnswers))
+    print("Final Testing Error with lambda 2^-5", pegasos_svm_test(testingAns, testingVectors, final_vectors))
 
-trainingVectors = np.load('train_save.npy')
-trainingAns = np.load('train_ans_save.npy')
-testingVectors = np.load('test_save.npy')
-testingAns = np.load('test_ans_save.npy')
+def main():
+    preprocessing()
 
-# Final Run with all testing set
-final_vectors = []
-for i in range(10):
-    final_vectors.append(pegasos_svm_train(trainingVectors, 2 ** -5, i))
-print("Final Testing Error with lambda 2^-5", pegasos_svm_test(testingAns, testingVectors, final_vectors))
+    trainingVectors = np.load('train_save.npy')
+    trainingAns = np.load('train_ans_save.npy')
+    weightVectors = []
+
+    trainingAnswers = []
+    testingAnswers = []
+
+    # cross-validation with multiple values of lambda
+    lambdas = [2 ** -5, 2 ** -4]
+
+    # validationErs = calculate_validation_errors(trainingVectors, trainingAns, lambdas)
+
+    # for ls, ve in zip(lambdas, validationErs):
+    #     print("Lambda:", ls, "ValEr:", ve)
+
+    trainingVectors = np.load('train_save.npy')
+    trainingAns = np.load('train_ans_save.npy')
+    testingVectors = np.load('test_save.npy')
+    testingAns = np.load('test_ans_save.npy')
+
+    show_final_results(trainingVectors, trainingAns, testingVectors, testingAns)
+
+
+if __name__ == "__main__":
+    main()
 
 
 
-# X = np.array([[1, 2], [3, 4], [5, 6], [7, 8]])
-# y = np.array([1, 2, 3, 4])
-# kf = KFold(n_splits=3, random_state=None, shuffle=False)
-# kf.get_n_splits(X)
-# KFold(n_splits=2, random_state=None, shuffle=False)
-# for train_index, test_index in kf.split(X):
-#     print("TRAIN:", train_index, "TEST:", test_index)
-#     # X_train, X_test = X[train_index], X[test_index]
-#     # y_train, y_test = y[train_index], y[test_index]
-#     # print("_______________")
-#     # print(X_train)
-#     # print(X_test)
-#     # print(y_train)
-#     # print(y_test)
-#     # print("_______________")
-# X= [x for x in range(2000)]
-# kf = KFold(n_splits=5, random_state=None, shuffle=False)
-# kf.get_n_splits(X)
-# KFold(n_splits=2, random_state=None, shuffle=False)
-# for train_index, test_index in kf.split(X):
-#     print("TRAIN:", train_index, "TEST:", test_index)

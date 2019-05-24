@@ -1,0 +1,131 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  25 MAY 2019 02:15
+entering extended mode
+**./SVM_MULTI_CLASS.tex
+(SVM_MULTI_CLASS.tex
+LaTeX2e <2018-12-01>
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 5.
+
+(C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/latex/txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+(C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/latex/listings\listings.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\lst@mode=\count88
+\lst@gtempboxa=\box27
+\lst@token=\toks17
+\lst@length=\count89
+\lst@currlwidth=\dimen103
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen106
+
+(C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box28
+)
+(C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/latex/listings\listings.cfg
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
+(SVM_MULTI_CLASS.aux)
+\openout1 = `SVM_MULTI_CLASS.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+
+(C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen107
+\scratchbox=\box29
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen108
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks19
+)
+\c@lstlisting=\count102
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 53.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 53.
+ (C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+)
+[1
+
+{C:/Users/vlad/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+(SVM_MULTI_CLASS.aux) ) 
+Here is how much of TeX's memory you used:
+ 2740 strings out of 492895
+ 35472 string characters out of 3133482
+ 453158 words of memory out of 3000000
+ 6692 multiletter control sequences out of 15000+200000
+ 6274 words of font info for 23 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,6n,41p,196b,1855s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on SVM_MULTI_CLASS.pdf (2 pages, 41358 bytes).
+PDF statistics:
+ 21 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

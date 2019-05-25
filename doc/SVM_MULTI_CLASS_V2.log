@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  25 MAY 2019 04:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  25 MAY 2019 09:52
 entering extended mode
 **./SVM_MULTI_CLASS_V2.tex
 (SVM_MULTI_CLASS_V2.tex
@@ -95,7 +95,7 @@ File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
-No file SVM_MULTI_CLASS_V2.aux.
+(SVM_MULTI_CLASS_V2.aux)
 \openout1 = `SVM_MULTI_CLASS_V2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -110,6 +110,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
+
 (C:\Users\vlad\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
@@ -147,8 +148,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3] [4] (SVM_MULTI_CLASS_V2.aux) ) 
 Here is how much of TeX's memory you used:
- 2897 strings out of 492895
- 37490 string characters out of 3133482
+ 2899 strings out of 492895
+ 37552 string characters out of 3133482
  477520 words of memory out of 3000000
  6837 multiletter control sequences out of 15000+200000
  8720 words of font info for 31 fonts, out of 3000000 for 9000
@@ -161,7 +162,7 @@ mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on SVM_MULTI_CLASS_V2.pdf (4 pages, 81199 bytes).
+Output written on SVM_MULTI_CLASS_V2.pdf (4 pages, 81202 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
